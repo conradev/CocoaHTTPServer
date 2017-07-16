@@ -8093,7 +8093,7 @@ static void CFWriteStreamCallback (CFWriteStreamRef stream, CFStreamEventType ty
 	return writeStream;
 }
 
-- (BOOL)enableBackgroundingOnSocketWithCaveat:(BOOL)caveat
+- (BOOL)enableBackgroundingOnSocketWithCaveat:(BOOL)caveat API_DEPRECATED("use PushKit for VoIP control purposes", macos(10.7, 10.11), ios(4.0, 9.0))
 {
 	if (![self createReadAndWriteStream])
 	{
@@ -8140,7 +8140,7 @@ static void CFWriteStreamCallback (CFWriteStreamRef stream, CFStreamEventType ty
 	return [self enableBackgroundingOnSocketWithCaveat:NO];
 }
 
-- (BOOL)enableBackgroundingOnSocketWithCaveat // Deprecated in iOS 4.???
+- (BOOL)enableBackgroundingOnSocketWithCaveat API_DEPRECATED("use PushKit for VoIP control purposes", macos(10.7, 10.11), ios(4.0, 9.0))
 {
 	// This method was created as a workaround for a bug in iOS.
 	// Apple has since fixed this bug.

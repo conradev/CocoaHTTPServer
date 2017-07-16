@@ -999,7 +999,7 @@ typedef NS_ENUM(NSInteger, GCDAsyncSocketError) {
  *     }];
  * }
 **/
-- (BOOL)enableBackgroundingOnSocket;
+- (BOOL)enableBackgroundingOnSocket API_DEPRECATED("use PushKit for VoIP control purposes", macos(10.7, 10.11), ios(4.0, 9.0));
 
 #endif
 
