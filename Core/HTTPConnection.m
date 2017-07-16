@@ -82,7 +82,7 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_WARN; // | HTTP_LOG_FLAG_TRACE;
 // the HTTP_RESPONSE tag. For all other segments prior to the last segment use HTTP_PARTIAL_RESPONSE, or some other
 // tag of your own invention.
 
-@interface HTTPConnection (PrivateAPI)
+@interface HTTPConnection () <GCDAsyncSocketDelegate>
 - (void)startReadingRequest;
 - (void)sendResponseHeadersAndBody;
 @end

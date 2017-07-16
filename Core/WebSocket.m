@@ -46,10 +46,9 @@ static inline NSUInteger WS_PAYLOAD_LENGTH(UInt8 frame)
 	return frame & 0x7F;
 }
 
-@interface WebSocket (PrivateAPI)
+@interface WebSocket () <GCDAsyncSocketDelegate>
 
 - (void)readRequestBody;
-- (void)sendResponseBody;
 - (void)sendResponseHeaders;
 
 @end
